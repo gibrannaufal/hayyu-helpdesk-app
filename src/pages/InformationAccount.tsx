@@ -37,7 +37,7 @@ const InformationAccount = () => {
     return (
         <>
         <Layouts />
-        <div className="container mx-auto px-4 mt-28">
+        <div className="container mx-auto px-4 mt-28 hidden md:block">
             <div className="section">
                 <span className="flex justify-center items-center font-bold text-[40px] text-[#038D77] font-montserrat">
                     Informasi Akun
@@ -83,6 +83,59 @@ const InformationAccount = () => {
                             <span>Kembali</span>
                         </Link>
                         <button  onClick={handleSubmit}  className="w-[240px] h-[56px] px-6 py-4 rounded-xl bg-[#038D77] border-none text-white font-montserrat text-[18px] font-bold inline-block text-center ">
+                            <span>Mulai Hapus Akun</span>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div className="container h-[calc(100svh-62px)] mx-auto px-4 mt-8 md:hidden">
+            <div className="section">
+                <span className="flex justify-center items-center font-bold text-[35px] text-[#038D77] mb-12 font-montserrat">
+                    Informasi Akun
+                </span>
+                <div className="grid grid-cols-1">
+                    <div className="col-start-1 col-end-7">
+                        <span className="label-form">Inputkan nomor telepon anda*</span>
+                    </div>
+                    <div className="col-start-1 col-end-7 mt-4">
+                        <input 
+                            className="w-[15%] h-[62px] px-o font-bold text-center rounded-l-lg border border-[#d3d3d3] bg-[#e4e4e4]" 
+                            type="text" 
+                            disabled
+                            name="jenis_nomor" 
+                            value="+62"
+                        />
+                        <input 
+                            className="flex-1 w-[85%] h-[62px] px-6 py-5 rounded-r-lg border border-[#d3d3d3] focus:outline-none focus:ring-0 border-l-0"
+                            type="text" 
+                            name="telp" 
+							value={FormData.telp} 
+							onChange={handleInputChange}
+
+                        />
+                       
+                    </div>
+                    <div className="col-start-1 col-end-7 mt-8">
+                        <span className="label-form">Inputkan password anda*</span>
+                    </div>
+                    <div className="col-start-1 col-end-7 mt-4">
+                         <input 
+                            className="flex-1 w-[100%] h-[62px] px-6 py-5 rounded-lg border border-[#d3d3d3] focus:outline-none focus:ring-0  focus:border-[#d3d3d3]"
+                            type="text" 
+                            name="password" 
+							value={FormData.password}
+							onChange={handleInputChange}
+
+                        />
+                    </div>
+                    
+                    <div className="col-start-1 col-end-7 flex justify-between items-center mt-28">   
+                        <Link to="/hapus-akun" className="w-[40vw] h-[13vw] px-2 py-4 text-[13px] rounded-xl bg-[#6c757d] border-none text-center text-white font-bold btn-secondary">
+                            <span>Kembali</span>
+                        </Link>
+                        <button  onClick={handleSubmit}  className="w-[40vw] h-[13vw] px-2 py-4 text-[13px] rounded-xl bg-[#038D77] border-none text-white font-montserrat font-bold inline-block text-center ">
                             <span>Mulai Hapus Akun</span>
                         </button>
                     </div>
